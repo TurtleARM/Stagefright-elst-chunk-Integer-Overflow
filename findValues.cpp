@@ -18,7 +18,7 @@ int main() {
 		for (samplerate=0; samplerate<=65535; samplerate++) {  
 			int mHeaderTimescale = 65536;
 			int64_t media_time;
-			media_time = (uint64_t)mt;
+			media_time = mt;
 			uint64_t halfscale = mHeaderTimescale / 2;
 			media_time = (media_time * 1000000 + halfscale)
 				/ mHeaderTimescale;
