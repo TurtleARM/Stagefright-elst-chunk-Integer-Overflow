@@ -9,9 +9,9 @@ int main() {
 	uint64_t res;
 	// mt * 1000000 <= MAX_UINT64
 	for (mt=0x000000F000000000; mt<=0x0000200000000000; mt++) {
-		res = (uint64_t)mt * (uint64_t)1000000;
+		res = mt * 1000000;
 		// check for overflow
-		if (mt != 0 && res/mt != (uint64_t)1000000) {
+		if (mt != 0 && res/mt != 1000000) {
 			continue;
 		}
 		// bitwise shifted
