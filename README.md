@@ -1,4 +1,9 @@
-# Stagefright-elst-chunk-Integer-Overflow
+# Stagefright 'elst' chunk Integer Overflow
+
+Providing specific combinations of media_time and samplerate MetaData leads to an Integer Overflow
+when calculating the value for kKeyEncoderDelay.
+`MPEG4Extractor::parseChunk(off64_t *offset, int depth)`
+
 ```
 ./mystagefright video/mp4 '/videos/1337' 
 
