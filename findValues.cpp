@@ -24,9 +24,10 @@ int main() {
 				/ mHeaderTimescale;
 			int64_t delay = (media_time  * samplerate + 500000) 
 				/ 1000000;
-			if (delay < 0 || delay > 0xFFFFFFFF)
+			if (delay < 0 || delay > 0xFFFFFFFF) {
 				cout<<"delay: "<<delay<<", media_time: "<<mt
 				<<", samplerate: "<<samplerate<<endl;
+			}
 		}
 	}
 	return 0;
